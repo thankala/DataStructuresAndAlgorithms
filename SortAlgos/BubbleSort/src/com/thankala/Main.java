@@ -11,14 +11,14 @@ public class Main {
         myArray[3] = 527;
         myArray[4] = 0;
 
-        int a = 0;
+        int temp = 0;
 
-        for(int k=myArray.length-1;k>0;k--){
-            for(int i=0;i<k;i++){
+        for(int lastUnsortedIndex=myArray.length-1;lastUnsortedIndex>0;lastUnsortedIndex--){
+            for(int i=0;i<lastUnsortedIndex;i++){
                 if(myArray[i]>myArray[i+1]){
-                    a= myArray[i+1];
+                    temp= myArray[i+1];
                     myArray[i+1] = myArray[i];
-                    myArray[i]=a;
+                    myArray[i]=temp;
                 }else{
                     continue;
                 }
